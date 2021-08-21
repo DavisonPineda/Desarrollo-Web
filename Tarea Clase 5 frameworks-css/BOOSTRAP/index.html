@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frameworks css - Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <form class="container"
+      method="GET"
+      enctype="application/x-www-form-urlencoded"
+      action="/archivo.html"
+    >
+    <div class="mb-3 text-center">
+      <p class="m-3 ">
+        <label class="text-center text-light bg-primary"
+          >NOMBRE:
+          <input class="form-control text-light bg-secondary border-primary type="text" name="nombre_cliente" required />
+        </label>
+      </p>
+      <p class="m-3">
+        <label class="text-center text-light bg-primary"
+          >EMAIL:
+          <input class="form-control text-light bg-secondary border-primary" type="email" name="direccion_correo" />
+        </label>
+      </p>
+      <p class="m-3">
+        <label class="text-center text-light bg-primary"
+          >TELEFONO:
+          <input class="form-control text-light bg-secondary border-primary" type="tel" name="numero_telefono" required />
+        </label>
+      </p>
+    </div>
+    <div class="d-flex text-center">
+      <fieldset class="mx-5 my-3 p-3 text-dark border border-primary rounded">
+        <legend class="text-light bg-primary border border-primary ">¿TIPO DE TAXI?</legend>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="car" /> Carro
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="van" /> Van
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="Tuc tuc" /> Tuc Tuc
+          </label>
+        </p>
+      </fieldset>
+      <fieldset class="mx-5 my-3 p-3 text-dark border border-primary rounded">
+        <legend class="text-center text-light bg-primary border border-primary" >EXTRAS</legend>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="baby" />
+            Silla de bebé
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="musica" />
+            No regueton
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="SillaRuedas" />
+            Silla de Ruedas
+          </label>
+        </p>
+      </fieldset>
+   
+      <p class="mt-5 text-center">
+        <label class="text-center text-light bg-primary border border-primary"
+          >Dia y hora:
+          <input class="border-primary form-control" type="datetime-local" name="fechahora" required />
+        </label>
+      </p>
+      <p>
+      </div>
+      <div class="ml-5 text-center ">
+        <label class="text-center text-light bg-primary border border-primary"
+          >Ubicacion:
+          <select class="border-primary form-control" name="pickup_place" id="pickup_place">
+            <option value="" selected="selected">Seleccione opcion</option>
+            <option value="Oficina">Oficina</option>
+            <option value="feria">La feria</option>
+            <option value="la_u">La Universidad</option>
+            <option value="no_se">Despues le digo</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label class="text-center text-light bg-primary border border-primary"
+          >Destino:
+          <input class="form-control border-primary" type="text" name="dest" required list="destino" />
+        </label>
+        <datalist id="destino">
+          <option value="Aeropuesto"></option>
+          <option value="La playa"></option>
+          <option value="Centro"></option>
+        </datalist>
+      </p>
+    </div>
+      <p class="ml-5 text-center ">
+        <label class="text-center text-light bg-primary border border-primary"
+          >Instrucciones especiales
+          <textarea class="border-primary form-control" name="comentarios" maxlength="500"></textarea>
+        </label>
+      </p>
+      <p class="d-grid gap-2 col-6 mx-auto">
+        <button class="col text-center btn btn-outline-light bg-primary btn-lg rounded-pill">Hacer Cita</button>
+      </p>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

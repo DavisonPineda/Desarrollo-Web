@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frameworks css - Bulma</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <form 
+      class="container"
+      method="GET"
+      enctype="application/x-www-form-urlencoded"
+      action="/archivo.html"
+    >
+      <div class="is-flex is-align-items-center">
+        <p class="m-4">
+          <label class="label has-text-danger-dark has-text-centered is-size-5"
+            >NOMBRE
+            <input
+              class="
+                input is-rounded is-size-5 has-background-warning has-text-black has-text-centered "
+              type="text"  name="nombre_cliente" required/>
+          </label>
+        </p>
+        
+      
+        <p class="m-4">
+          <label class="label has-text-danger-dark has-text-centered is-size-5"
+            >EMAIL
+            <input
+              class="
+                input is-rounded is-size-5 has-background-warning has-text-black has-text-centered "
+              type="email"
+              name="direccion_correo"
+            />
+          </label>
+        </p>
+        <p class="m-4">
+          <label class="label has-text-danger-dark has-text-centered is-size-5"
+            >TELEFONO
+            <input
+              class="input is-rounded is-size-5 has-background-warning  has-text-black has-text-centered "
+              type="tel"
+              name="numero_telefono"
+              required
+            />
+          </label>
+        </p>
+      </div>
+     
+        <fieldset class="m-5 has-text-centered">
+          <legend class="label has-text-danger-dark has-text-centered is-size-5">
+            ¿TIPO DE TAXI?
+          </legend>
+          <p>
+            <label>
+              <input type="radio" name="taxi" required value="car" /> Carro
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="taxi" required value="van" /> Van
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="taxi" required value="Tuctuc" /> Tuc Tuc
+            </label>
+          </p>
+        </fieldset>
+        </div>
+        <fieldset class="m-5 has-text-centered ">
+          <legend class="label has-text-danger-dark has-text-centered is-size-5">EXTRAS</legend>
+          <p >
+            <label>
+              <input type="checkbox" name="extras" value="baby" />
+              Silla de bebé
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="extras" value="musica" />
+              No regueton
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="extras" value="SillaRuedas" />
+              Silla de Ruedas
+            </label>
+          </p>
+        </fieldset>
+      </div>
+      <div class="is-flex is-align-items-center ">
+        <p class="m-5">
+          <label class="label has-text-danger-dark"
+            >DIA Y HORA
+            <input type="datetime-local" name="fechahora" required />
+          </label>
+        </p>
+        <p class="m-5 is-flex">
+          <label class="label has-text-danger-dark has-text-centered is-size-5"
+            >UBICACION:
+            <select name="pickup_place" id="pickup_place">
+              <option value="" selected="selected">Seleccione opcion</option>
+              <option value="Oficina">Oficina</option>
+              <option value="feria">La feria</option>
+              <option value="la_u">La Universidad</option>
+              <option value="no_se">Despues le digo</option>
+            </select>
+          </label>
+        </p>
+        <p class="m-5">
+          <label class="label has-text-danger-dark has-text-centered is-size-5"
+            >DESTINO
+            <input type="text" name="dest" required list="destino" />
+          </label>
+          <datalist id="destino">
+            <option value="Aeropuesto"></option>
+            <option value="La playa"></option>
+            <option value="Centro"></option>
+          </datalist>
+        </p>
+      </div>
+      <p class="m-5 control">
+        <label class="label has-text-danger-dark has-text-centered is-size-5"
+          >INSTRUCCIONES ESPECIALES
+          <textarea
+            class="textarea is-dark has-background-warning" name="comentarios"  maxlength="500"
+          ></textarea>
+        </label>
+      </p>
+      <p class="buttons is-centered">
+        <button class="button is-warning is-large is-rounded">
+          Hacer Cita
+        </button>
+      </p>
+    </form>
+  </body>
+</html>

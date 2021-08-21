@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frameworks css - Pure CSS</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+      integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form class="pure-form pure-form-stacked"
+      method="GET"
+      enctype="application/x-www-form-urlencoded"
+      action="/archivo.html"
+    >
+    <div class="pure-g m-xs ">
+      <p class="pure-u-1 pure-u-md-1-3">
+        <label
+          >Nombre:
+          <input type="text" name="nombre_cliente" required />
+        </label>
+      </p>
+      <p class="pure-u-1 pure-u-md-1-3" >
+        <label
+          >Email:
+          <input type="email" name="direccion_correo" />
+        </label>
+      </p>
+      <p class="pure-u-1 pure-u-md-1-3">
+        <label
+          >Telefono:
+          <input type="tel" name="numero_telefono" required />
+        </label>
+      </p>
+    </div>
+      <fieldset>
+        <legend>¿Tipo de taxi?</legend>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="car" /> Carro
+          </label>
+        </p>
+        <p>
+          <label >
+            <input type="radio" name="taxi" required value="van" /> Van
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="Tuctuc" /> Tuc Tuc
+          </label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Extras</legend>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="baby" />
+            Silla de bebé
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="musica" />
+            No regueton
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="SillaRuedas" />
+            Silla de Ruedas
+          </label>
+        </p>
+      </fieldset>
+      <p>
+        <label
+          >Dia y hora:
+          <input type="datetime-local" name="fechahora" required />
+        </label>
+      </p>
+      <p>
+        <label
+          >Ubicacion:
+          <select name="pickup_place" id="pickup_place">
+            <option value="" selected="selected">Seleccione opcion</option>
+            <option value="Oficina">Oficina</option>
+            <option value="feria">La feria</option>
+            <option value="la_u">La Universidad</option>
+            <option value="no_se">Despues le digo</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label
+          >Destino:
+          <input type="text" name="dest" required list="destino" />
+        </label>
+        <datalist id="destino">
+          <option value="Aeropuesto"></option>
+          <option value="La playa"></option>
+          <option value="Centro"></option>
+        </datalist>
+      </p>
+      <p>
+        <label
+          >Instrucciones especiales
+          <textarea name="comentarios" maxlength="500"></textarea>
+        </label>
+      </p>
+      <p>
+        <button class="pure-button pure-input-1-2 pure-button-primary">Hacer cita</button>
+      </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frameworks css - Tailwind CSS</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body >
+    <form 
+      method="GET"
+      enctype="application/x-www-form-urlencoded"
+      action="/archivo.html"
+    >
+    <div class="bg-yellow-500 border w-1/2 mx-auto mt-5 rounded-full text-center">
+      <p  class="mx-10 my-3 w-auto">
+        <label class="text-blue-100 text-xl"
+          >NOMBRE
+          <input class="w-80 ml-10 border border-purple-700 rounded-full px-1 py-1 text-center" type="text" name="nombre_cliente" required/>
+        </label>
+      </p>
+      <p class="mx-10 my-3 w-auto">
+        <label class="text-blue-100 text-xl"
+          >EMAIL 
+          <input class="w-80 ml-10 border border-purple-700 rounded-full px-1 py-1 text-center" type="email" name="direccion_correo" />
+        </label>
+      </p>
+      <p class="mx-10 my-3 w-auto">
+        <label class="text-blue-100 text-xl"
+          >TELEFONO
+          <input class="w-80 ml-10 border border-purple-700 rounded-full px-1 py-1 text-center" type="tel" name="numero_telefono" required />
+        </label>
+      </p>
+    </div>
+    <div class="bg-red-500 flex items-baseline w-1/2 mx-auto mt-5 rounded-full text-center">
+    <div class="bg-yellow-400 w-60 border rounded mx-auto object-left mt-2 p-3 ">
+      <fieldset >
+        <legend class="text-blue-600 text-xl text-center" >¿TIPO DE TAXI?</legend>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="car" /> Carro
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="van" /> Van
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="taxi" required value="Tuctuc" /> Tuc Tuc
+          </label>
+        </p>
+      </fieldset>
+    </div>
+    <div class="bg-yellow-400  w-60 border rounded mx-auto object-right mt-2 p-3">
+      <fieldset>
+        <legend class="text-blue-600 text-xl text-center">EXTRAS</legend>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="baby" />
+            Silla de bebé
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="musica" />
+            No regueton
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="extras" value="SillaRuedas" />
+            Silla de Ruedas
+          </label>
+        </p>
+      </fieldset>
+    </div>
+  </div>
+    <div class=" bg-yellow-400  w-1/2 p-3 border mx-auto mt-2">
+      <p>
+        <label class="text-blue-100 text-xl"
+          >DIA Y HORA
+          <input class="text-blue-600 w-80 m-3 border border-purple-700 rounded-full p-1 text-center" type="datetime-local" name="fechahora" required />
+        </label>
+      </p>
+      <p>
+        <label class="text-blue-100 text-xl"
+          >UBICACION
+          <select name="pickup_place " id="pickup_place text-blue-600">
+            <option value="" selected="selected">Seleccione opcion</option>
+            <option value="Oficina ">Oficina</option>
+            <option value="feria">La feria</option>
+            <option value="la_u">La Universidad</option>
+            <option value="no_se">Despues le digo</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label class="text-blue-100 text-xl"
+          >DESTINO
+          <input class="w-80 m-3 border border-purple-700 rounded-full p-1 text-center" type="text" name="dest" required list="destino" />
+        </label>
+        <datalist id="destino">
+          <option value="Aeropuesto"></option>
+          <option value="La playa"></option>
+          <option value="Centro"></option>
+        </datalist>
+      </p>
+    </div>
+      <p class="w-80 mx-auto mt-3">
+        <label
+          >Instrucciones especiales
+          <textarea class="border border-gray-800 w-60" name="comentarios" maxlength="500"></textarea>
+        </label>
+      </p>
+
+      <div class="mx-auto w-1/2">
+      <p>
+        <button class="mt-10 ml-60 px-4 py-1 text-xl text-red-600 font-bold rounded-full border border-blue-500 hover:text-white hover:bg-blue-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">Hacer cita</button>
+      </p>
+    </div>
+    </form>
+  </body>
+</html>

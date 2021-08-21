@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frameworks css - Foundation</title>
+    <!-- Compressed CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-float.min.css"
+      integrity="sha256-4ldVyEvC86/kae2IBWw+eJrTiwNEbUUTmN0zkP4luL4="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form
+      class="grid-container"
+      method="GET"
+      enctype="application/x-www-form-urlencoded"
+      action="/archivo.html"
+    >
+      <div class="menu grid-x grid-padding-x large-12">
+        <p class="large-4 medium-4 cell">
+          <label
+            >Nombre:
+            <input
+              class="text-center m10"
+              type="text"
+              name="nombre_cliente"
+              required
+            />
+          </label>
+        </p>
+        <p class="large-4 medium-4 cell">
+          <label
+            >Email:
+            <input type="email" name="direccion_correo" />
+          </label>
+        </p>
+        <p class="large-4 medium-4 cell">
+          <label
+            >Telefono:
+            <input type="tel" name="numero_telefono" required />
+          </label>
+        </p>
+      </div>
+      <div class="callout">
+        <fieldset>
+          <legend>¿Tipo de taxi?</legend>
+          <p>
+            <label>
+              <input type="radio" name="taxi" required value="car" /> carrito
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="taxi" required value="van" /> Van
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="taxi" required value="Tuctuc" /> Tuc-Tuc
+            </label>
+          </p>
+        </fieldset>
+      </div>
+      <div class="callout">
+        <fieldset>
+          <legend>Extras</legend>
+          <p>
+            <label>
+              <input type="checkbox" name="extras" value="baby" />
+              Silla de bebé
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="extras" value="musica" />
+              No regueton
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="extras" value="SillaRuedas" />
+              Silla de Ruedas
+            </label>
+          </p>
+        </fieldset>
+      </div>
+      <p>
+        <label
+          >Dia y hora:
+          <input type="datetime-local" name="fechahora" required />
+        </label>
+      </p>
+      <p>
+        <label
+          >Ubicacion:
+          <select name="pickup_place" id="pickup_place" class="dropdown menu">
+            <option value="" selected="selected">Seleccione opcion</option>
+            <option value="Oficina">Oficina</option>
+            <option value="feria">La feria</option>
+            <option value="la_u">La Universidad</option>
+            <option value="no_se">Despues le digo</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label
+          >Destino:
+          <input type="text" name="dest" required list="destino" />
+        </label>
+        <datalist id="destino">
+          <option value="Aeropuesto"></option>
+          <option value="La playa"></option>
+          <option value="Centro"></option>
+        </datalist>
+      </p>
+      <p>
+        <label
+          >Instrucciones especiales
+          <textarea
+            class="small-12.cell"
+            name="comentarios"
+            maxlength="500"
+          ></textarea>
+        </label>
+      </p>
+      <p>
+        <button type="button" class="success button large float-center">
+          Hacer cita
+        </button>
+      </p>
+    </form>
+  </body>
+</html>
